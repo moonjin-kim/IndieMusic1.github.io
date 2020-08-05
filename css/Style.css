@@ -179,6 +179,7 @@ body {
 
 .search-wrapper {
     position: absolute;
+    left:50%;
 }
 .search-wrapper.active {}
 
