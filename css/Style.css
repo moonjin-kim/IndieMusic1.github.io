@@ -1,0 +1,170 @@
+header{
+  width: 100%;
+  height: 62px;
+  background-color: black;
+}
+
+nav{
+  box-sizing: border-box;
+
+}
+div{
+  display: block;
+  position: relative;
+}
+
+html,body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  position: relative;
+  background: #f2f2f2;
+}
+
+ul{
+   list-style:none;
+  height: inherit;
+  margin:auto;
+  padding-left:0px;
+}
+
+li{
+  float: left;
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  margin:auto;
+}
+
+a,p{
+  padding:0px;
+  margin: 0px;
+}
+
+a{
+  z-index: 4;
+  text-decoration: none;
+  color:white;
+  position: relative;
+  vertical-align: middle;
+  display: block;
+}
+
+p{
+  text-align: center;
+}
+
+button{
+  height: inherit;
+  border:0px;
+  background:#1b5ac2;
+  padding:0px;
+  float: right;
+  outline: none;
+}
+
+input{
+  width:87%;
+  height:inherit;
+  border:0px;
+  padding:0px;
+}
+
+.Full_category{
+  padding:0px 7px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+}
+
+.main_banner{/*임시*/
+  margin:0px;
+  padding:0px;
+  width:120px;
+}
+
+.nav_bar{
+  display:flex;
+  padding:7px 0px;
+  height: 48px;
+}
+
+
+
+.l_height{
+  height:inherit;
+}
+
+.logo{
+  font-size: 20px
+}
+
+.left_menu,.center_menu{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.right_menu{/*임시*/
+  margin:0px;
+  width:240px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.center_menu{
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.center_menu{
+    position: absolute;
+}
+
+.nav_item{
+  align-items: center;
+}
+
+.menu{
+  margin:0px 20px;
+  font-size: 20px;
+}
+
+#body{
+  height:3000px;
+
+}
+
+#head{
+  position: sticky;
+  top: 0;
+}
+
+#login,#about{
+  height:30px;
+  width:70px
+}
+
+#such{
+  width:160px;
+  color:white;
+  background-color: black;
+}
+
+#about{
+  background: black;
+  color:white;
+}
