@@ -23,6 +23,10 @@ body{
   background: #f2f2f2;
 }
 
+
+li{
+  padding: 30px;
+}
 ul{
    list-style:none;
   height: inherit;
@@ -30,14 +34,7 @@ ul{
   padding-left:0px;
 }
 
-li{
-  float: left;
-  width: 25%;
-  height: 100%;
-  text-align: center;
-  position: relative;
-  margin:auto;
-}
+
 
 a,p{
   padding:0px;
@@ -67,8 +64,6 @@ button{
 }
 
 input{
-  width:87%;
-  height:inherit;
   border:0px;
   padding:0px;
 }
@@ -143,14 +138,34 @@ input{
   font-size: 20px;
 }
 
-#body{
-  height:3000px;
+.genrelist{
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
 
+.mixedModularHome{
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.Mainlist{
+  list-style: none;
+}
+
+.select{
+  text-align: center;
+}
+
+#body{
+  width:70%;
+  height:3000px;
+  left:15%;
 }
 
 #head{
   position: sticky;
   top: 0;
+  z-index:5;
 }
 
 #login,#about{
@@ -169,6 +184,11 @@ input{
   color:white;
 }
 
+.select{
+  height:30px;
+  width: 100%;
+}
+
 body {
    background: #212129;
 }
@@ -179,9 +199,19 @@ body {
 
 .search-wrapper {
     position: absolute;
+    transform: translate(-20%, -50%);
+    top:50%;
     left:50%;
 }
-.search-wrapper.active {}
+
+.search-wrapper.active {
+  position: absolute;
+  transform: translate(-70%, -50%);
+  top:50%;
+  left:50%;
+  z-index:4;
+  background:#000;
+}
 
 .search-wrapper .input-holder {
     height: 70px;
@@ -192,12 +222,14 @@ body {
     position: relative;
     transition: all 0.3s ease-in-out;
 }
+
 .search-wrapper.active .input-holder {
     width:450px;
     border-radius: 50px;
     background: rgba(0,0,0,0.5);
     transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
 }
+
 .search-wrapper .input-holder .search-input {
     width:100%;
     height: 50px;
@@ -219,10 +251,12 @@ body {
     transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
     transition-delay: 0.3s;
 }
+
 .search-wrapper.active .input-holder .search-input {
     opacity: 1;
     transform: translate(0, 10px);
 }
+
 .search-wrapper .input-holder .search-icon {
     width:70px;
     height:70px;
@@ -237,6 +271,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
+
 .search-wrapper.active .input-holder .search-icon {
     width: 50px;
     height:50px;
@@ -267,6 +302,7 @@ body {
     border-radius: 2px;
     background: #FE5F55;
 }
+
 .search-wrapper .input-holder .search-icon span::after {
     width: 14px;
     height: 14px;
@@ -287,6 +323,7 @@ body {
     transition: all .3s cubic-bezier(0.285, -0.450, 0.935, 0.110);
     transition-delay: 0.2s;
 }
+
 .search-wrapper.active .close {
     right:-50px;
     transform: rotate(45deg);
@@ -310,4 +347,78 @@ body {
     height: 5px;
     left: 0px;
     top: 10px;
+}
+
+/*************************************
+ * generic styling for ALS elements
+ ************************************/
+
+.als-container {
+	position: relative;
+	width: 100%;
+	margin: 0px auto;
+	z-index: 0;
+}
+
+.als-viewport {
+	position: relative;
+	overflow: hidden;
+	margin: 0px auto;
+}
+
+.als-wrapper {
+	position: relative;
+	list-style: none;
+}
+
+.als-item {
+	position: relative;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+}
+
+.als-viewport{
+  margin:0px 100px;
+}
+.als-prev, .als-next {
+	position: absolute;
+	cursor: pointer;
+	clear: both;
+	z-index: 10;
+}
+
+/*************************************
+ * specific styling for #demo3
+ ************************************/
+
+#demo3 {
+	margin: 40px auto;
+}
+
+#demo3 .als-item {
+	margin: 0px 5px;
+	padding: 4px 0px;
+	min-height: 150px;
+	min-width: 170px;
+	text-align: center;
+}
+
+#demo3 .als-item img {
+	display: block;
+	margin: 0 auto;
+	vertical-align: middle;
+}
+
+#demo3 .als-prev, #demo3 .als-next {
+	top: 40px;
+}
+
+#demo3 .als-prev {
+	left: 2%;
+}
+
+#demo3 .als-next {
+	right: 2%;
 }

@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/Style.css?after" type="text/css">
     <script src="lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.als-2.1.js"></script>
     <script>
     function searchToggle(obj, evt){
     var container = $(obj).closest('.search-wrapper');
@@ -17,6 +18,20 @@
             container.find('.search-input').val('');
         }
     }
+
+    </script>
+
+    <script>
+      $(document).ready(function(){
+	      $("#demo3").als({
+		      visible_items: 5,
+		      scrolling_items: 1,
+		      orientation: "horizontal",
+		      circular: "yes",
+		      autoscroll: "no",
+		      interval: 4000
+	      });
+      });
     </script>
   </head>
   <body>
@@ -35,7 +50,7 @@
                 <a class="menu" id="playlist" href="https://moonjin-kim.github.io/IndieMusic1.github.io/page_playlist.html">보관함</a>
                 <a class="menu" id="community" href="https://moonjin-kim.github.io/IndieMusic1.github.io/page_community.html">커뮤니티</a>
               </div>
-              <div class="nav_item nav_bar" id="suchtab">
+              <div class="nav_item nav_bar" id="searchtab">
                 <div class="search-wrapper">
                   <div class="input-holder">
                     <input type="text" class="search-input" placeholder="검색해주세요" />
@@ -53,6 +68,62 @@
         </header>
       </div>
       <div id="body">
+        <div class="Mainpage">
+          <ul class="Mainlist">
+            <li class="genrelist">
+              <div class="select">
+                <form>
+                  <input type="radio" name="fruit" checked="checked" value="장르" /> 장르
+                  <input type="radio" name="fruit" value="기분" /> 기분
+                </form>
+                <div class="als-container" id="demo3">
+                  <span class="als-prev"><img alt="prev" title="previous" /></span>
+                  <div class="als-viewport">
+                    <ul class="als-wrapper">
+                      <li class="als-item">orange</li>
+                      <li class="als-item">apple</li>
+                      <li class="als-item">banana</li>
+                      <li class="als-item">blueberry</li>
+                      <li class="als-item">watermelon</li>
+                      <li class="als-item">cherry</li>
+                      <li class="als-item">strawberry</li>
+                      <li class="als-item">avocado</li>
+                      <li class="als-item">pear</li>
+                      <li class="als-item">pineapple</li>
+                      <li class="als-item">papaya</li>
+                      <li class="als-item">raspberry</li>
+                    </ul>
+                  </div>
+                  <span class="als-next"><img alt="next" title="next" /></span>
+                </div>
+              </div>
+              <div class="rollingbanner">
+                <div class="banner_item">
+                </div>
+                <div class="banner_item">
+                </div>
+                <div class="banner_item">
+                </div>
+                <div class="banner_item">
+                </div>
+
+                <div class="banner_item">
+                </div>
+              </div>
+            </li>
+            <li class="mixedModularHome">
+
+            </li>
+            <li class="mixedModularHome">
+            </li>
+            <li class="mixedModularHome">
+            </li>
+            <li class="mixedModularHome">
+            </li>
+          </ul>
+        </div>
+        <div class="Musicplayer" id="player">
+        </div>
       </div>
     </div>
   </body>
