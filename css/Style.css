@@ -379,9 +379,6 @@ body {
 	float: left;
 }
 
-.als-viewport{
-  margin:0px 100px;
-}
 .als-prev, .als-next {
 	position: absolute;
 	cursor: pointer;
@@ -400,8 +397,8 @@ body {
 #demo3 .als-item {
 	margin: 0px 5px;
 	padding: 4px 0px;
-	min-height: 150px;
-	min-width: 170px;
+	min-height: 320px;
+	min-width: 300px;
 	text-align: center;
 }
 
