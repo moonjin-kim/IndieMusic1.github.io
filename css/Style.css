@@ -27,6 +27,7 @@ body{
 li{
   padding: 30px;
 }
+
 ul{
    list-style:none;
   height: inherit;
@@ -141,6 +142,8 @@ input{
 .genrelist{
   display: list-item;
   text-align: -webkit-match-parent;
+  position: relative;
+  height: auto;
 }
 
 .mixedModularHome{
@@ -150,6 +153,7 @@ input{
 
 .Mainlist{
   list-style: none;
+  padding-top:20px;
 }
 
 .select{
@@ -157,9 +161,9 @@ input{
 }
 
 #body{
-  width:70%;
+  width:60%;
   height:3000px;
-  left:15%;
+  left:20%;
 }
 
 #head{
@@ -185,9 +189,25 @@ input{
 }
 
 .select{
-  height:30px;
+  height:auto;
   width: 100%;
 }
+
+.index{
+  font-size:50px;
+  color:white;
+  text-align: left;
+
+}
+
+.scroll{
+  height: auto;
+  width: auto;
+}
+
+/*************************************
+ * searchbar
+ ************************************/
 
 body {
    background: #212129;
@@ -386,6 +406,7 @@ body {
 	z-index: 10;
 }
 
+
 /*************************************
  * specific styling for #demo3
  ************************************/
@@ -397,8 +418,8 @@ body {
 #demo3 .als-item {
 	margin: 0px 5px;
 	padding: 4px 0px;
-	min-height: 320px;
-	min-width: 300px;
+  min-height: 200px;
+	min-width: 200px;
 	text-align: center;
 }
 
@@ -418,4 +439,52 @@ body {
 
 #demo3 .als-next {
 	right: 2%;
+}
+
+#demo3 .als-prev , #demo3 .als-next{
+  top:50
+}
+
+/*************************************
+ * specific styling for #demo3
+ ************************************/
+
+#demo2 {
+	margin: 40px auto;
+}
+
+#demo2 .als-item {
+	margin: 0px 5px;
+	padding: 4px 0px;
+	min-height: 200px;
+	min-width: 200px;
+	text-align: center;
+  background: white;
+}
+
+#demo2 .als-item img {
+	display: block;
+	margin: 0 auto;
+	vertical-align: middle;
+}
+
+#demo2 .als-prev, #demo2 .als-next {
+	top: 40px;
+}
+
+#demo2 .als-prev {
+	left: 2%;
+}
+
+#demo2 .als-next {
+	right: 2%;
+}
+
+#demo2 .als-prev , #demo2 .als-next{
+  top:50
+}
+
+.orange{
+  background: "black";
+  position: absolute;
 }

@@ -32,6 +32,17 @@
 		      interval: 4000
 	      });
       });
+
+      $(document).ready(function(){
+	      $("#demo2").als({
+		      visible_items: 5,
+		      scrolling_items: 1,
+		      orientation: "horizontal",
+		      circular: "yes",
+		      autoscroll: "no",
+		      interval: 4000
+	      });
+      });
     </script>
   </head>
   <body>
@@ -46,7 +57,7 @@
             </div>
             <div class="center_menu nav_bar nav">
               <div class="nav_item nav_bar">
-                <a class="menu" id="home" href="https://moonjin-kim.github.io/IndieMusic1.github.io/page_upload.html">홈</a>
+                <a class="menu" id="home" href="https://moonjin-kim.github.io/IndieMusic1.github.io/index.html">홈</a>
                 <a class="menu" id="playlist" href="https://moonjin-kim.github.io/IndieMusic1.github.io/page_playlist.html">보관함</a>
                 <a class="menu" id="community" href="https://moonjin-kim.github.io/IndieMusic1.github.io/page_community.html">커뮤니티</a>
               </div>
@@ -54,14 +65,16 @@
                 <div class="search-wrapper">
                   <div class="input-holder">
                     <input type="text" class="search-input" placeholder="검색해주세요" />
-                    <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+                    <button class="search-icon" onclick="searchToggle(this, event);" type="submit"><span></span></button>
                   </div>
                   <span class="close" onclick="searchToggle(this, event);"></span>
                 </div>
               </div>
             </div>
             <div class="right_menu nav_bar">
-              <button id="login">Login</button>
+              <button id="login">
+                <a href="page_login.html">Login</a>
+              </button>
               <button id="about">•••</button>
             </div>
           </div>
@@ -69,14 +82,38 @@
       </div>
       <div id="body">
         <div class="Mainpage">
-          <ul class="Mainlist">
-            <li class="genrelist">
-              <div class="select">
-                <form>
-                  <input type="radio" name="fruit" checked="checked" value="장르" /> 장르
-                  <input type="radio" name="fruit" value="기분" /> 기분
-                </form>
+          <div class="Mainlist">
+            <div class="genrelist">
+                <div class="index"><strong>장르</strong></div>
                 <div class="als-container" id="demo3">
+                  <span class="als-prev"><img alt="prev" title="previous" /></span>
+                  <div class="als-viewport">
+                    <ul class="als-wrapper">
+                      <li class="als-item">orange
+                        <a href="https://moonjin-kim.github.io/IndieMusic1.github.io/"><!--
+                          <img src="image/8-to-1 mux.jpg" width="200px" height="200px" border="0px"/>그림 -->
+                        </a>
+                      </li>
+                      <li class="als-item">apple</li>
+                      <li class="als-item">banana</li>
+                      <li class="als-item">blueberry</li>
+                      <li class="als-item">watermelon</li>
+                      <li class="als-item">cherry</li>
+                      <li class="als-item">strawberry</li>
+                      <li class="als-item">avocado</li>
+                      <li class="als-item">pear</li>
+                      <li class="als-item">pineapple</li>
+                      <li class="als-item">papaya</li>
+                      <li class="als-item">raspberry</li>
+                    </ul>
+                  </div>
+                  <span class="als-next"><img alt="next" title="next" /></span>
+                </div>
+            </div>
+
+            <div class="genrelist">
+                <div class="index"><strong>기분</strong></div>
+                <div class="als-container" id="demo2">
                   <span class="als-prev"><img alt="prev" title="previous" /></span>
                   <div class="als-viewport">
                     <ul class="als-wrapper">
@@ -96,31 +133,10 @@
                   </div>
                   <span class="als-next"><img alt="next" title="next" /></span>
                 </div>
-              </div>
-              <div class="rollingbanner">
-                <div class="banner_item">
-                </div>
-                <div class="banner_item">
-                </div>
-                <div class="banner_item">
-                </div>
-                <div class="banner_item">
-                </div>
+            </div>
 
-                <div class="banner_item">
-                </div>
-              </div>
-            </li>
-            <li class="mixedModularHome">
 
-            </li>
-            <li class="mixedModularHome">
-            </li>
-            <li class="mixedModularHome">
-            </li>
-            <li class="mixedModularHome">
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="Musicplayer" id="player">
         </div>
